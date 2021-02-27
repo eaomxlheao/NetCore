@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace LeerData
 {
     public class Curso
@@ -7,5 +9,6 @@ namespace LeerData
         public string Descripcion { get; set; }
         public System.DateTime FechaPublicacion { get; set; }
         public Precio PrecioPromocion { get; set; }
+        public ICollection<Comentario> ComentarioLista { get; set; }
     }
 }
