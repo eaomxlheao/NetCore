@@ -12,8 +12,16 @@ namespace LeerData
             optionsBuilder.UseSqlServer(connectionString);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Indicar que tiene 2 llaves primarias
+            modelBuilder.Entity<CursoInstructor>().HasKey(c => new { c.CursoId, c.InstructorId });
+        }
+
         public DbSet<Curso> Curso { get; set; }
         public DbSet<Precio> Precio { get; set; }
         public DbSet<Comentario> Comentario { get; set; }
+        public DbSet<Instructor> Instructor { get; set; }
+        public DbSet<CursoInstructor> CursoInstructor { get; set; }
     }
 }

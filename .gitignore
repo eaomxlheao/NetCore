@@ -1,2 +1,4 @@
 LeerData/bin*
 LeerData/obj*
+/.vs/NetCore/DesignTimeBuild/*
+/.vs/NetCore/v16/*
