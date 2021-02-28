@@ -2,3 +2,11 @@ LeerData/bin*
 LeerData/obj*
 /.vs/NetCore/DesignTimeBuild/*
 /.vs/NetCore/v16/*
+/Aplicacion/obj
+/Dominio/obj
+/Persistencia/obj
+/WebAPI/obj
+/Aplicacion/bin/Debug/netstandard2.0
+/Dominio/bin/Debug/netstandard2.0
+/Persistencia/bin/Debug/netstandard2.0
+/WebAPI/bin/Debug/netcoreapp3.1
