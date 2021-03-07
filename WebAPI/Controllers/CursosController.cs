@@ -33,5 +33,11 @@ namespace WebAPI.Controllers
             var curso = await mediator.Send(new ConsultaId.CursoUnico { CursoId = id });
             return curso;
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Unit>> Crear(Nuevo.Ejecuta data)
+        {
+            return await mediator.Send(data);
+        }
     }
 }
