@@ -25,5 +25,13 @@ namespace WebAPI.Controllers
         {
             return await mediator.Send(new Consulta.ListaCursos());
         }
+
+        //http://localhost/api/cursos/2
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Curso>> Detalle(int id)
+        {
+            var curso = await mediator.Send(new ConsultaId.CursoUnico { CursoId = id });
+            return curso;
+        }
     }
 }
