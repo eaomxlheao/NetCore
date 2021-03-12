@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Aplicacion.Cursos
 {
-    public class Nuevo
+    public class Agregar
     {
         public class Ejecuta : IRequest
         {
