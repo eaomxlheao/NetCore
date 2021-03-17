@@ -1,4 +1,5 @@
 using Aplicacion.Cursos;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,7 +37,10 @@ namespace WebAPI
 
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
 
-            services.AddControllers();
+
+            //La parte de configuracion se utiliza solo para una clase en este caso Agregar sin embargo las validaciones se van
+            //a aplicar para todas las clases que hereden de AbstractValidator
+            services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Agregar>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,3 +14,4 @@ LeerData/obj*
 /Dominio/bin/Debug/netstandard2.1
 /Persistencia/bin/Debug/netstandard2.1
 /App/obj
+/App/bin/Debug/netcoreapp3.1

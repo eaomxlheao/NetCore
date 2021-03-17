@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using FluentValidation;
 using MediatR;
 using Persistencia;
 using System;
@@ -14,10 +15,19 @@ namespace Aplicacion.Cursos
     {
         public class Ejecuta : IRequest
         {
-            [Required(ErrorMessage = "Por favor ingrese el título")]
             public string Titulo { get; set; }
             public string Descripcion { get; set; }
             public System.DateTime FechaPublicacion { get; set; }
+        }
+
+        public class EjecutaValidacion : AbstractValidator<Ejecuta>
+        {
+            public EjecutaValidacion()
+            {
+                RuleFor(x => x.Titulo).NotEmpty();
+                RuleFor(x => x.Descripcion).NotEmpty();
+                RuleFor(x => x.FechaPublicacion).NotEmpty();
+            }
         }
 
         public class Manejador : IRequestHandler<Ejecuta>
