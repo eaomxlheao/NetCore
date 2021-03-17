@@ -13,3 +13,4 @@ LeerData/obj*
 /Aplicacion/bin/Debug/netstandard2.1
 /Dominio/bin/Debug/netstandard2.1
 /Persistencia/bin/Debug/netstandard2.1
+/App/obj
